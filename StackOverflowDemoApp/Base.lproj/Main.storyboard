@@ -6,10 +6,10 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Search View Controller-->
         <scene sceneID="RXe-om-az0">
             <objects>
-                <viewController id="onC-Yc-3a4" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="onC-Yc-3a4" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="N5Y-XM-MYb"/>
                         <viewControllerLayoutGuide type="bottom" id="xuU-Q1-yC6"/>
@@ -32,6 +32,9 @@
                                     <constraint firstAttribute="width" constant="52" id="CAd-8K-wLU"/>
                                 </constraints>
                                 <state key="normal" title="Search"/>
+                                <connections>
+                                    <action selector="startSearch" destination="onC-Yc-3a4" eventType="touchUpInside" id="Kf0-c7-ZQY"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -47,7 +50,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="E3U-au-AHb"/>
                     <connections>
+                        <outlet property="searchQuery" destination="jhA-pX-x4s" id="Xhc-A5-JUQ"/>
                         <outlet property="view" destination="5BH-Vs-KtG" id="q8m-ka-qCt"/>
+                        <segue destination="Kmt-vY-Y5E" kind="show" identifier="showQuestions" id="qjK-7p-yds"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SXh-Rs-nd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -57,14 +62,15 @@
         <!--Root View Controller-->
         <scene sceneID="J8m-Co-db0">
             <objects>
-                <tableViewController id="Kmt-vY-Y5E" sceneMemberID="viewController">
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uph-OV-kAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController storyboardIdentifier="questionsView" id="Kmt-vY-Y5E" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BUC-yH-bjV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Qsj-N9-V6p">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qsj-N9-V6p" id="ffn-tH-gUI">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -79,7 +85,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="ydQ-h9-L5u"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uph-OV-kAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="956" y="-186"/>
         </scene>
@@ -92,7 +97,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="onC-Yc-3a4" kind="relationship" relationship="rootViewController" id="h91-6c-jgP"/>
+                        <segue destination="onC-Yc-3a4" kind="relationship" relationship="rootViewController" id="KNQ-kw-vBC"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fb-Ei-y1k" userLabel="First Responder" sceneMemberID="firstResponder"/>
