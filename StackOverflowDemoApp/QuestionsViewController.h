@@ -10,4 +10,6 @@
 
 @interface QuestionsViewController : UITableViewController
 
+@property (strong, nonatomic) NSArray *tableSource;
+
 @end

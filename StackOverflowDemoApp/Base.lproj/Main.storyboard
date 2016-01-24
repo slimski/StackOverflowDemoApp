@@ -7,69 +7,67 @@
     </dependencies>
     <scenes>
         <!--Search View Controller-->
-        <scene sceneID="RXe-om-az0">
+        <scene sceneID="sro-Qf-t57">
             <objects>
-                <viewController storyboardIdentifier="SearchViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="onC-Yc-3a4" customClass="SearchViewController" sceneMemberID="viewController">
+                <viewController id="zy1-Ze-Acu" customClass="SearchViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="N5Y-XM-MYb"/>
-                        <viewControllerLayoutGuide type="bottom" id="xuU-Q1-yC6"/>
+                        <viewControllerLayoutGuide type="top" id="CDh-eE-qOr"/>
+                        <viewControllerLayoutGuide type="bottom" id="aD8-Mo-Ybj"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8hR-SG-m0d">
+                    <view key="view" contentMode="scaleToFill" id="mM1-yA-PJj">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="BDie5" translatesAutoresizingMaskIntoConstraints="NO" id="uI7-8o-8XJ">
-                                <rect key="frame" x="151" y="118" width="300" height="89"/>
-                            </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jhA-pX-x4s">
-                                <rect key="frame" x="61" y="285" width="479" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5BH-Vs-KtG">
-                                <rect key="frame" x="275" y="323" width="52" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BdX-V7-PAN">
+                                <rect key="frame" x="274" y="362" width="52" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="52" id="CAd-8K-wLU"/>
+                                    <constraint firstAttribute="width" constant="52" id="iG2-Ua-GqR"/>
                                 </constraints>
                                 <state key="normal" title="Search"/>
                                 <connections>
-                                    <action selector="startSearch" destination="onC-Yc-3a4" eventType="touchUpInside" id="Kf0-c7-ZQY"/>
+                                    <action selector="startSearch" destination="zy1-Ze-Acu" eventType="touchUpInside" id="kRv-j4-art"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="BDie5" translatesAutoresizingMaskIntoConstraints="NO" id="oMF-W8-Rll">
+                                <rect key="frame" x="156" y="107" width="300" height="89"/>
+                            </imageView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xFa-Me-dWF" userLabel="Search Query">
+                                <rect key="frame" x="67" y="285" width="479" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="jhA-pX-x4s" firstAttribute="centerY" secondItem="8hR-SG-m0d" secondAttribute="centerY" id="9pI-EK-jwx"/>
-                            <constraint firstItem="5BH-Vs-KtG" firstAttribute="top" secondItem="jhA-pX-x4s" secondAttribute="bottom" constant="8" id="Tsi-iE-itf"/>
-                            <constraint firstItem="5BH-Vs-KtG" firstAttribute="centerX" secondItem="jhA-pX-x4s" secondAttribute="centerX" id="YFv-sP-Bsm"/>
-                            <constraint firstItem="jhA-pX-x4s" firstAttribute="leading" secondItem="8hR-SG-m0d" secondAttribute="leadingMargin" constant="41" id="asG-lU-762"/>
-                            <constraint firstItem="uI7-8o-8XJ" firstAttribute="top" secondItem="N5Y-XM-MYb" secondAttribute="bottom" constant="54" id="eid-0w-5xu"/>
-                            <constraint firstItem="jhA-pX-x4s" firstAttribute="centerX" secondItem="8hR-SG-m0d" secondAttribute="centerX" id="j80-ua-UUJ"/>
-                            <constraint firstItem="5BH-Vs-KtG" firstAttribute="centerX" secondItem="uI7-8o-8XJ" secondAttribute="centerX" id="qwv-7W-ki1"/>
+                            <constraint firstItem="oMF-W8-Rll" firstAttribute="centerX" secondItem="xFa-Me-dWF" secondAttribute="centerX" id="LhC-R3-Pww"/>
+                            <constraint firstItem="BdX-V7-PAN" firstAttribute="centerX" secondItem="xFa-Me-dWF" secondAttribute="centerX" constant="-6.5" id="QoV-bt-Uaq"/>
+                            <constraint firstItem="xFa-Me-dWF" firstAttribute="leading" secondItem="mM1-yA-PJj" secondAttribute="leadingMargin" constant="47" id="UjD-wq-DF6"/>
+                            <constraint firstItem="oMF-W8-Rll" firstAttribute="top" secondItem="CDh-eE-qOr" secondAttribute="bottom" constant="43" id="ccb-sp-lVb"/>
+                            <constraint firstItem="xFa-Me-dWF" firstAttribute="top" secondItem="CDh-eE-qOr" secondAttribute="bottom" constant="221" id="mwL-71-Fj2"/>
+                            <constraint firstItem="BdX-V7-PAN" firstAttribute="top" secondItem="xFa-Me-dWF" secondAttribute="bottom" constant="47" id="pBN-Ji-7sA"/>
+                            <constraint firstItem="xFa-Me-dWF" firstAttribute="centerX" secondItem="mM1-yA-PJj" secondAttribute="centerX" constant="6.5" id="xzW-KC-Z44"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="E3U-au-AHb"/>
+                    <navigationItem key="navigationItem" id="5ie-2P-4bP"/>
                     <connections>
-                        <outlet property="searchQuery" destination="jhA-pX-x4s" id="Xhc-A5-JUQ"/>
-                        <outlet property="view" destination="5BH-Vs-KtG" id="q8m-ka-qCt"/>
-                        <segue destination="Kmt-vY-Y5E" kind="show" identifier="showQuestions" id="qjK-7p-yds"/>
+                        <outlet property="searchQuery" destination="xFa-Me-dWF" id="iwM-il-55Q"/>
+                        <segue destination="Kmt-vY-Y5E" kind="show" id="xat-YJ-Jcr"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SXh-Rs-nd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="beO-1q-v9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="282" y="-186"/>
+            <point key="canvasLocation" x="50" y="309"/>
         </scene>
         <!--Root View Controller-->
         <scene sceneID="J8m-Co-db0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Uph-OV-kAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController storyboardIdentifier="questionsView" id="Kmt-vY-Y5E" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="questionsView" id="Kmt-vY-Y5E" customClass="QuestionsViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="BUC-yH-bjV">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Qsj-N9-V6p">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellIdentifier" id="Qsj-N9-V6p">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qsj-N9-V6p" id="ffn-tH-gUI">
@@ -85,8 +83,9 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Root View Controller" id="ydQ-h9-L5u"/>
                 </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uph-OV-kAf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="956" y="-186"/>
+            <point key="canvasLocation" x="-448" y="1144"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="tfY-t0-1xa">
@@ -97,7 +96,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="onC-Yc-3a4" kind="relationship" relationship="rootViewController" id="KNQ-kw-vBC"/>
+                        <segue destination="zy1-Ze-Acu" kind="relationship" relationship="rootViewController" id="fj7-gv-TLG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0fb-Ei-y1k" userLabel="First Responder" sceneMemberID="firstResponder"/>

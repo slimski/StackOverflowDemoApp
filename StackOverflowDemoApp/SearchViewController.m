@@ -7,7 +7,7 @@
 //
 
 #import "SearchViewController.h"
-
+#import "QuestionsViewController.h"
 
 @interface SearchViewController ()
 
@@ -31,18 +31,20 @@
     self.manager = [[StackOverflowManager alloc] init];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    NSLog(@"Prepare for segue: %@", segue.identifier);
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
 
 - (IBAction)startSearch
 {
+    NSLog(@"start search");
     [self.manager searchQuestionsByText:self.searchQuery.text];
     // OR MyViewController *vc = [[MyViewController alloc] init];
     
@@ -54,8 +56,8 @@
 - (void)searchCompletedWithResult:(NSArray *)result
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        UITableViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"questionsView"];
-        
+        QuestionsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"questionsView"];
+        vc.tableSource = result;
         [self.navigationController pushViewController:vc animated:YES];
    
     });
