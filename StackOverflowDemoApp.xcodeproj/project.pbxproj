@@ -17,6 +17,7 @@
 		62A0C7481C5230DD00DF645E /* StackOverflowSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0C7471C5230DD00DF645E /* StackOverflowSDK.framework */; };
 		62A0C7491C54C3E700DF645E /* StackOverflowSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0C7471C5230DD00DF645E /* StackOverflowSDK.framework */; };
 		62A0C74A1C54C3E700DF645E /* StackOverflowSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0C7471C5230DD00DF645E /* StackOverflowSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		62A0C7711C54CF6500DF645E /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C7701C54CF6500DF645E /* QuestionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -46,6 +47,8 @@
 		62A0C73C1C52211100DF645E /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
 		62A0C73D1C52211100DF645E /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
 		62A0C7471C5230DD00DF645E /* StackOverflowSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = StackOverflowSDK.framework; sourceTree = "<group>"; };
+		62A0C76F1C54CF6500DF645E /* QuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionsViewController.h; sourceTree = "<group>"; };
+		62A0C7701C54CF6500DF645E /* QuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +94,8 @@
 				62A0C7271C517D9900DF645E /* Logo.xcassets */,
 				62A0C73C1C52211100DF645E /* SearchViewController.h */,
 				62A0C73D1C52211100DF645E /* SearchViewController.m */,
+				62A0C76F1C54CF6500DF645E /* QuestionsViewController.h */,
+				62A0C7701C54CF6500DF645E /* QuestionsViewController.m */,
 			);
 			path = StackOverflowDemoApp;
 			sourceTree = "<group>";
@@ -177,6 +182,7 @@
 			files = (
 				62A0C7131C51729900DF645E /* AppDelegate.m in Sources */,
 				62A0C73E1C52211100DF645E /* SearchViewController.m in Sources */,
+				62A0C7711C54CF6500DF645E /* QuestionsViewController.m in Sources */,
 				62A0C7101C51729900DF645E /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

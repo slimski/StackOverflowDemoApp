@@ -18,8 +18,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-//    self.manager = [[StackOverflowManager alloc] init];
-//    self.manager.searchDelegate = self;
+    self.manager = [[StackOverflowManager alloc] init];
+    self.manager.communicator = [[StackOverflowCommunicator alloc] init];
+    self.manager.communicator.delegate = self.manager;
+    self.manager.searchDelegate = self;
     NSLog(@"Search view controller did load");
     // Do any additional setup after loading the view.
 }
@@ -42,8 +44,6 @@
 - (IBAction)startSearch
 {
     [self.manager searchQuestionsByText:self.searchQuery.text];
-    UITableViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"questionsView"];
-    [self.navigationController pushViewController:vc animated:YES];
     // OR MyViewController *vc = [[MyViewController alloc] init];
     
     // any setup code for *vc
@@ -53,7 +53,14 @@
 
 - (void)searchCompletedWithResult:(NSArray *)result
 {
-
+    dispatch_async(dispatch_get_main_queue(), ^{
+        UITableViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"questionsView"];
+        
+        [self.navigationController pushViewController:vc animated:YES];
+   
+    });
+    
+    
 }
 
 - (void)searchFailedWithError:(NSError *)error
