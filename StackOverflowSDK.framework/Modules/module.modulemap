@@ -1,0 +1,6 @@
+framework module StackOverflowSDK {
+  umbrella header "StackOverflowSDK.h"
+
+  export *
+  module * { export * }
+}
