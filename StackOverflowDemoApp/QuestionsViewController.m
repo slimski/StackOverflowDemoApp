@@ -7,7 +7,9 @@
 //
 
 #import "QuestionsViewController.h"
+#import "QuestionViewCell.h"
 #import <StackOverflowSDK/Question.h>
+#import <StackOverflowSDK/User.h>
 
 @interface QuestionsViewController ()
 
@@ -45,10 +47,27 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier" forIndexPath:indexPath];
+    QuestionViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier" forIndexPath:indexPath];
     Question *question = [self.tableSource objectAtIndex:indexPath.row];
-    cell.textLabel.text = question.title;
 
+    [cell.authorButton setTitle:question.owner.display_name forState:UIControlStateNormal];
+    [cell.authorButton sizeToFit];
+    
+    cell.questionLabel.text = question.title;
+    [cell.questionLabel sizeToFit];
+    cell.answersCountLabel.text = [NSString stringWithFormat:@"answers: %ld", (long)question.answer_count];
+
+    for (int i=0; i<question.tags.count && i<5; i++) {
+        NSString *tag = [question.tags objectAtIndex:i];
+        UIButton *tagButton = [cell.tags objectAtIndex:i];
+        [tagButton setTitle:tag forState:UIControlStateNormal];
+    }
+    
+    for (NSUInteger i=question.tags.count; i<5; i++)
+    {
+        UIButton *tagButton = [cell.tags objectAtIndex:i];
+        [tagButton setTitle:@"" forState:UIControlStateNormal];
+    }
     
     return cell;
 }

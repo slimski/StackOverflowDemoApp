@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		625AA5B71C555CDA004EB5D0 /* QuestionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 625AA5B61C555CDA004EB5D0 /* QuestionViewCell.m */; };
 		62A0C7101C51729900DF645E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C70F1C51729900DF645E /* main.m */; };
 		62A0C7131C51729900DF645E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C7121C51729900DF645E /* AppDelegate.m */; };
 		62A0C7191C51729900DF645E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62A0C7171C51729900DF645E /* Main.storyboard */; };
@@ -35,6 +36,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		625AA5B51C555CDA004EB5D0 /* QuestionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionViewCell.h; sourceTree = "<group>"; };
+		625AA5B61C555CDA004EB5D0 /* QuestionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionViewCell.m; sourceTree = "<group>"; };
 		62A0C70B1C51729900DF645E /* StackOverflowDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StackOverflowDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62A0C70F1C51729900DF645E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		62A0C7111C51729900DF645E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -96,6 +99,8 @@
 				62A0C73D1C52211100DF645E /* SearchViewController.m */,
 				62A0C76F1C54CF6500DF645E /* QuestionsViewController.h */,
 				62A0C7701C54CF6500DF645E /* QuestionsViewController.m */,
+				625AA5B51C555CDA004EB5D0 /* QuestionViewCell.h */,
+				625AA5B61C555CDA004EB5D0 /* QuestionViewCell.m */,
 			);
 			path = StackOverflowDemoApp;
 			sourceTree = "<group>";
@@ -180,6 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				625AA5B71C555CDA004EB5D0 /* QuestionViewCell.m in Sources */,
 				62A0C7131C51729900DF645E /* AppDelegate.m in Sources */,
 				62A0C73E1C52211100DF645E /* SearchViewController.m in Sources */,
 				62A0C7711C54CF6500DF645E /* QuestionsViewController.m in Sources */,
@@ -342,6 +348,7 @@
 				62A0C7241C51729900DF645E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
