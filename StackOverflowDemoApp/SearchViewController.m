@@ -61,8 +61,6 @@
         [self.navigationController pushViewController:vc animated:YES];
    
     });
-    
-    
 }
 
 - (void)searchFailedWithError:(NSError *)error

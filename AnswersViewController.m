@@ -1,22 +1,18 @@
 //
-//  QuestionsViewController.m
+//  AnswersViewController.m
 //  StackOverflowDemoApp
 //
-//  Created by Igor Nabokov on 24.01.16.
+//  Created by Igor Nabokov on 26.01.16.
 //  Copyright © 2016 Igor Nabokov. All rights reserved.
 //
 
-#import "QuestionsViewController.h"
-#import "QuestionViewCell.h"
-#import <StackOverflowSDK/Question.h>
-#import <StackOverflowSDK/User.h>
 #import "AnswersViewController.h"
 
-@interface QuestionsViewController ()
+@interface AnswersViewController ()
 
 @end
 
-@implementation QuestionsViewController
+@implementation AnswersViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,8 +22,6 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    self.tableView.estimatedRowHeight = 120;
-    self.tableView.rowHeight = UITableViewAutomaticDimension;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,55 +31,25 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Incomplete implementation, return the number of sections
+    return 0;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    return self.tableSource.count;
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete implementation, return the number of rows
+    return 0;
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    QuestionViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cellIdentifier" forIndexPath:indexPath];
-    Question *question = [self.tableSource objectAtIndex:indexPath.row];
-
-    [cell.authorButton setTitle:question.owner.display_name forState:UIControlStateNormal];
-    [cell.authorButton sizeToFit];
+/*
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    cell.questionLabel.text = question.title;
-    [cell.questionLabel sizeToFit];
-    cell.answersCountLabel.text = [NSString stringWithFormat:@"answers: %ld", (long)question.answer_count];
-
-    for (int i=0; i<question.tags.count && i<5; i++) {
-        NSString *tag = [question.tags objectAtIndex:i];
-        UIButton *tagButton = [cell.tags objectAtIndex:i];
-        [tagButton setTitle:tag forState:UIControlStateNormal];
-    }
-    
-    for (NSUInteger i=question.tags.count; i<5; i++)
-    {
-        UIButton *tagButton = [cell.tags objectAtIndex:i];
-        [tagButton setTitle:@"" forState:UIControlStateNormal];
-    }
+    // Configure the cell...
     
     return cell;
 }
-
-
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    dispatch_async(dispatch_get_main_queue(), ^{
-        AnswersViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"answersView"];
-        vc.sourceQuestion = [self.tableSource objectAtIndex:indexPath.row];
-        [self.navigationController pushViewController:vc animated:YES];
-        
-    });
-
-}
+*/
 
 /*
 // Override to support conditional editing of the table view.
