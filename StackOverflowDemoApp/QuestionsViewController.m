@@ -44,7 +44,11 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.tableSource.count;
+    if (self.tableSource)
+    {
+        return self.tableSource.count;
+    }
+    return 0;
 }
 
 
@@ -71,7 +75,7 @@
         UIButton *tagButton = [cell.tags objectAtIndex:i];
         [tagButton setTitle:@"" forState:UIControlStateNormal];
     }
-    
+    cell.quickAccess = self.quickAccessViewController;
     return cell;
 }
 
@@ -85,6 +89,17 @@
         
     });
 
+}
+
+- (void)questionsReceivedWithResult:(NSArray *)result
+{
+    self.tableSource = result;
+    [self.tableView reloadData];
+}
+
+- (void)questionsFailedWithError:(NSError *)error
+{
+    
 }
 
 /*

@@ -7,6 +7,8 @@
 //
 
 #import "QuestionViewCell.h"
+#import <StackOverflowSDK/StackOverflowSDK.h>
+#import "QuestionsViewController.h"
 
 @implementation QuestionViewCell
 
@@ -20,4 +22,14 @@
     // Configure the view for the selected state
 }
 
+- (IBAction)showAuthorQuestions:(UIButton *)sender
+{
+    if (!self.quickAccess)
+        return;
+    
+    [self.quickAccess.manager getQuestionsByAuthor:[sender.titleLabel.text intValue]];
+}
+
+- (IBAction)showTagQuestions:(UIButton *)sender {
+}
 @end

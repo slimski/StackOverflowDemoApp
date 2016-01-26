@@ -89,26 +89,44 @@
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nlr-3l-oxG" userLabel="Tag1">
                                             <rect key="frame" x="21" y="81" width="46" height="30"/>
                                             <state key="normal" title="tag1"/>
+                                            <connections>
+                                                <action selector="showTagQuestions:" destination="Qsj-N9-V6p" eventType="touchUpInside" id="LPm-6X-aJ2"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S71-ed-qaP" userLabel="Tag2">
                                             <rect key="frame" x="70" y="81" width="46" height="30"/>
                                             <state key="normal" title="tag2"/>
+                                            <connections>
+                                                <action selector="showTagQuestions:" destination="Qsj-N9-V6p" eventType="touchUpInside" id="DWE-XN-BR6"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ0-of-pcL" userLabel="Tag3">
                                             <rect key="frame" x="125" y="81" width="46" height="30"/>
                                             <state key="normal" title="tag3"/>
+                                            <connections>
+                                                <action selector="showTagQuestions:" destination="Qsj-N9-V6p" eventType="touchUpInside" id="CBa-hE-iCf"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I7Y-5a-j8R" userLabel="Tag4">
                                             <rect key="frame" x="179" y="81" width="46" height="30"/>
                                             <state key="normal" title="tag4"/>
+                                            <connections>
+                                                <action selector="showTagQuestions:" destination="Qsj-N9-V6p" eventType="touchUpInside" id="Nik-Fs-5By"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v4O-ty-PgT" userLabel="Tag5">
                                             <rect key="frame" x="233" y="81" width="46" height="30"/>
                                             <state key="normal" title="tag5"/>
+                                            <connections>
+                                                <action selector="showTagQuestions:" destination="Qsj-N9-V6p" eventType="touchUpInside" id="dC5-r4-0nc"/>
+                                            </connections>
                                         </button>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J8r-5b-G1h" userLabel="Author">
                                             <rect key="frame" x="21" y="8" width="190" height="30"/>
                                             <state key="normal" title="author"/>
+                                            <connections>
+                                                <action selector="showAuthorQuestions:" destination="Qsj-N9-V6p" eventType="touchUpInside" id="1rL-AN-CLW"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <constraints>

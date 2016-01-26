@@ -56,9 +56,12 @@
 - (void)searchCompletedWithResult:(NSArray *)result
 {
     dispatch_async(dispatch_get_main_queue(), ^{
-        QuestionsViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"questionsView"];
-        vc.tableSource = result;
-        [self.navigationController pushViewController:vc animated:YES];
+        QuestionsViewController *mainVC = [self.storyboard instantiateViewControllerWithIdentifier:@"questionsView"];
+        QuestionsViewController *quickAccessVC = [self.storyboard instantiateViewControllerWithIdentifier:@"questionsView"];
+        quickAccessVC.manager = [[StackOverflowManager alloc] init];
+        mainVC.quickAccessViewController = quickAccessVC;
+        mainVC.tableSource = result;
+        [self.navigationController pushViewController:mainVC animated:YES];
    
     });
 }
