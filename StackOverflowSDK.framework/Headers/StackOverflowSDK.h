@@ -14,7 +14,11 @@
 #import <StackOverflowSDK/StackOverflowCommunicator.h>
 #import <StackOverflowSDK/ModelsConverter.h>
 #import <StackOverflowSDK/SearchDelegate.h>
+#import <StackOverflowSDK/QuestionsDelegate.h>
+#import <StackOverflowSDK/AnswersDelegate.h>
 #import <StackOverflowSDK/StackoverflowManager.h>
+#import <StackoverflowSDK/Answer.h>
+#import <StackOverflowSDK/QuestionAnswersDelegate.h>
 
 //! Project version number for StackOverflowSDK.
 FOUNDATION_EXPORT double StackOverflowSDKVersionNumber;

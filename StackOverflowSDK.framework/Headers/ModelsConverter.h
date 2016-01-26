@@ -11,5 +11,6 @@
 @interface ModelsConverter : NSObject
 
 + (NSArray *)questionsFromJsonData:(NSData *)json error:(NSError **)error;
++ (NSArray *)answersFromJsonData:(NSData *)json error:(NSError **)error;
 
 @end

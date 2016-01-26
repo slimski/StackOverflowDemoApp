@@ -4,9 +4,17 @@
 <dict>
 	<key>files</key>
 	<dict>
+		<key>Headers/Answer.h</key>
+		<data>
+		JqgGujWKiajQgCl4k8rAdo9ElMc=
+		</data>
+		<key>Headers/AnswersDelegate.h</key>
+		<data>
+		udIkEUi5wvkCD0NfY2857/Y57bo=
+		</data>
 		<key>Headers/ModelsConverter.h</key>
 		<data>
-		gFMLtQffSxpQ/BjcG756QH/MR+Y=
+		eb/UKF4bqSHF913/TuvkCpOfsFA=
 		</data>
 		<key>Headers/PopularQuestionsDelegate.h</key>
 		<data>
@@ -14,7 +22,15 @@
 		</data>
 		<key>Headers/Question.h</key>
 		<data>
-		3a5eVdJekWZf9T82qNL3EMDMmao=
+		nUIu18lQCPe4lzW0YZFMAd0DCYw=
+		</data>
+		<key>Headers/QuestionAnswersDelegate.h</key>
+		<data>
+		r1iHdXuTCW5uOzn3AazbwyavJ9I=
+		</data>
+		<key>Headers/QuestionsDelegate.h</key>
+		<data>
+		P4Uz+lSDQDgLvfV85G1lgCWmhf0=
 		</data>
 		<key>Headers/SearchDelegate.h</key>
 		<data>
@@ -26,15 +42,15 @@
 		</data>
 		<key>Headers/StackOverflowCommunicator.h</key>
 		<data>
-		LlFf40XBWfCdIYs/lu4rDjGmSVs=
+		Ab/DraZ259NdL53svJF9f72e6zA=
 		</data>
 		<key>Headers/StackOverflowManager.h</key>
 		<data>
-		gYf/bOQeu8W8iw2Ir5o9nwW4YDw=
+		EXUeyqKaOSe8FKqmrk55sor2elo=
 		</data>
 		<key>Headers/StackOverflowSDK.h</key>
 		<data>
-		8KO1VpupI3ROuXl1NxW7wlZXrD0=
+		sOuMI3FJK49VEFCnXAK+K1/pcDM=
 		</data>
 		<key>Headers/User.h</key>
 		<data>
@@ -51,9 +67,17 @@
 	</dict>
 	<key>files2</key>
 	<dict>
+		<key>Headers/Answer.h</key>
+		<data>
+		JqgGujWKiajQgCl4k8rAdo9ElMc=
+		</data>
+		<key>Headers/AnswersDelegate.h</key>
+		<data>
+		udIkEUi5wvkCD0NfY2857/Y57bo=
+		</data>
 		<key>Headers/ModelsConverter.h</key>
 		<data>
-		gFMLtQffSxpQ/BjcG756QH/MR+Y=
+		eb/UKF4bqSHF913/TuvkCpOfsFA=
 		</data>
 		<key>Headers/PopularQuestionsDelegate.h</key>
 		<data>
@@ -61,7 +85,15 @@
 		</data>
 		<key>Headers/Question.h</key>
 		<data>
-		3a5eVdJekWZf9T82qNL3EMDMmao=
+		nUIu18lQCPe4lzW0YZFMAd0DCYw=
+		</data>
+		<key>Headers/QuestionAnswersDelegate.h</key>
+		<data>
+		r1iHdXuTCW5uOzn3AazbwyavJ9I=
+		</data>
+		<key>Headers/QuestionsDelegate.h</key>
+		<data>
+		P4Uz+lSDQDgLvfV85G1lgCWmhf0=
 		</data>
 		<key>Headers/SearchDelegate.h</key>
 		<data>
@@ -73,15 +105,15 @@
 		</data>
 		<key>Headers/StackOverflowCommunicator.h</key>
 		<data>
-		LlFf40XBWfCdIYs/lu4rDjGmSVs=
+		Ab/DraZ259NdL53svJF9f72e6zA=
 		</data>
 		<key>Headers/StackOverflowManager.h</key>
 		<data>
-		gYf/bOQeu8W8iw2Ir5o9nwW4YDw=
+		EXUeyqKaOSe8FKqmrk55sor2elo=
 		</data>
 		<key>Headers/StackOverflowSDK.h</key>
 		<data>
-		8KO1VpupI3ROuXl1NxW7wlZXrD0=
+		sOuMI3FJK49VEFCnXAK+K1/pcDM=
 		</data>
 		<key>Headers/User.h</key>
 		<data>

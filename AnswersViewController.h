@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import <StackOverflowSDK/Question.h>
+#import <StackOverflowSDK/StackoverflowSDK.h>
 
-@interface AnswersViewController : UITableViewController
+@interface AnswersViewController : UITableViewController<AnswersDelegate>
 
-@property Question *sourceQuestion;
+@property (strong, nonatomic) Question *sourceQuestion;
+@property (strong, nonatomic) NSArray *answers;
+@property (strong, nonatomic) StackOverflowManager *manager;
 
 @end

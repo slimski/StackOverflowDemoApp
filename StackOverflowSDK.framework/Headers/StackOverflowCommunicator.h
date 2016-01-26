@@ -10,13 +10,17 @@
 
 @protocol SearchQueryDelegate;
 @protocol PopularQuestionsDelegate;
+@protocol QuestionAnswersDelegate;
 
 @interface StackOverflowCommunicator : NSObject
 
 @property (weak, nonatomic) id<SearchQueryDelegate> delegate;
 @property (weak, nonatomic) id<PopularQuestionsDelegate> questionsDelegate;
+@property (weak, nonatomic) id<QuestionAnswersDelegate> answersDelegate;
+
 - (void)searchQuestionsByText:(NSString *)text;
-- (void)getPopularQuestionsByOwnerId:(NSUInteger)ownerId;
+- (void)getPopularQuestionsByOwnerId:(int)ownerId;
 - (void)getPopularQuestionsByTag:(NSString *)tag;
+- (void)getAnswersForQuestionId:(int)questionId;
 
 @end
