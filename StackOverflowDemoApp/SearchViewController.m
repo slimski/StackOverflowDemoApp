@@ -59,8 +59,10 @@
         QuestionsViewController *mainVC = [self.storyboard instantiateViewControllerWithIdentifier:@"questionsView"];
         QuestionsViewController *quickAccessVC = [self.storyboard instantiateViewControllerWithIdentifier:@"questionsView"];
         quickAccessVC.manager = [[StackOverflowManager alloc] init];
+        quickAccessVC.manager.questionsDelegate = mainVC;
         mainVC.quickAccessViewController = quickAccessVC;
         mainVC.tableSource = result;
+        
         [self.navigationController pushViewController:mainVC animated:YES];
    
     });

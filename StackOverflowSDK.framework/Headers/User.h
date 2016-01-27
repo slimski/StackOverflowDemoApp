@@ -10,7 +10,7 @@
 
 @interface User : NSObject
 
-@property (nonatomic) NSInteger user_id;
+@property (nonatomic) int user_id;
 @property (strong, nonatomic) NSString *display_name;
 
 @end

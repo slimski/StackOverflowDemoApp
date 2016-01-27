@@ -17,6 +17,7 @@
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *tags;
 
 @property (weak, nonatomic) QuestionsViewController *quickAccess;
+@property (nonatomic) int authorId;
 
 - (IBAction)showAuthorQuestions:(UIButton *)sender;
 - (IBAction)showTagQuestions:(UIButton *)sender;

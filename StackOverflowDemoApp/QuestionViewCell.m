@@ -27,7 +27,8 @@
     if (!self.quickAccess)
         return;
     
-    [self.quickAccess.manager getQuestionsByAuthor:[sender.titleLabel.text intValue]];
+    
+    [self.quickAccess.manager getQuestionsByAuthor:self.authorId];
 }
 
 - (IBAction)showTagQuestions:(UIButton *)sender {

@@ -59,10 +59,12 @@
 
     [cell.authorButton setTitle:question.owner.display_name forState:UIControlStateNormal];
     [cell.authorButton sizeToFit];
+    cell.authorId = question.owner.user_id;
     
     cell.questionLabel.text = question.title;
     [cell.questionLabel sizeToFit];
     cell.answersCountLabel.text = [NSString stringWithFormat:@"answers: %ld", (long)question.answer_count];
+    
 
     for (int i=0; i<question.tags.count && i<5; i++) {
         NSString *tag = [question.tags objectAtIndex:i];
@@ -93,8 +95,19 @@
 
 - (void)questionsReceivedWithResult:(NSArray *)result
 {
-    self.tableSource = result;
-    [self.tableView reloadData];
+    self.quickAccessViewController.tableSource = result;
+    self.quickAccessViewController.modalPresentationStyle = UIModalPresentationPopover;
+    [self presentViewController:self.quickAccessViewController animated:YES completion:nil];
+    
+    // configure the Popover presentation controller
+//    UIPopoverPresentationController *popController = [self.quickAccessViewController popoverPresentationController];
+//    popController.permittedArrowDirections = UIPopoverArrowDirectionAny;
+//    popController.sourceView = self.tableView; //The view containing the anchor rectangle for the popover.
+//    popController.sourceRect = CGRectMake(384, 40, 0, 0); //The rectangle in the specified view in which to anchor the popover.
+    
+    //    popController.barButtonItem = self.leftButton;
+    //    popController.delegate = self;
+
 }
 
 - (void)questionsFailedWithError:(NSError *)error
