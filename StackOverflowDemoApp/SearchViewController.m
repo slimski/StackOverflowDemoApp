@@ -23,34 +23,12 @@
     self.manager.communicator.delegate = self.manager;
     self.manager.searchDelegate = self;
     NSLog(@"Search view controller did load");
-    // Do any additional setup after loading the view.
 }
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    self.manager = [[StackOverflowManager alloc] init];
-}
-
-
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSLog(@"Prepare for segue: %@", segue.identifier);
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-
 
 - (IBAction)startSearch
 {
     NSLog(@"start search");
     [self.manager searchQuestionsByText:self.searchQuery.text];
-    // OR MyViewController *vc = [[MyViewController alloc] init];
-    
-    // any setup code for *vc
-    
-    
 }
 
 - (void)searchCompletedWithResult:(NSArray *)result
@@ -64,7 +42,6 @@
         mainVC.tableSource = result;
         mainVC.title = self.searchQuery.text;
         [self.navigationController pushViewController:mainVC animated:YES];
-   
     });
 }
 
