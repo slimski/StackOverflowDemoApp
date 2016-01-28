@@ -20,6 +20,7 @@
 		62A0C74A1C54C3E700DF645E /* StackOverflowSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 62A0C7471C5230DD00DF645E /* StackOverflowSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		62A0C7711C54CF6500DF645E /* QuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62A0C7701C54CF6500DF645E /* QuestionsViewController.m */; };
 		62D41B861C5755FE005E6F6E /* AnswersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D41B851C5755FE005E6F6E /* AnswersViewController.m */; };
+		62D41B951C59E3B7005E6F6E /* QuickAccessPresentationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62D41B941C59E3B7005E6F6E /* QuickAccessPresentationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -55,6 +56,8 @@
 		62A0C7701C54CF6500DF645E /* QuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionsViewController.m; sourceTree = "<group>"; };
 		62D41B841C5755FE005E6F6E /* AnswersViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AnswersViewController.h; path = ../AnswersViewController.h; sourceTree = "<group>"; };
 		62D41B851C5755FE005E6F6E /* AnswersViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AnswersViewController.m; path = ../AnswersViewController.m; sourceTree = "<group>"; };
+		62D41B931C59E3B7005E6F6E /* QuickAccessPresentationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickAccessPresentationController.h; sourceTree = "<group>"; };
+		62D41B941C59E3B7005E6F6E /* QuickAccessPresentationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickAccessPresentationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 				62A0C7701C54CF6500DF645E /* QuestionsViewController.m */,
 				625AA5B51C555CDA004EB5D0 /* QuestionViewCell.h */,
 				625AA5B61C555CDA004EB5D0 /* QuestionViewCell.m */,
+				62D41B931C59E3B7005E6F6E /* QuickAccessPresentationController.h */,
+				62D41B941C59E3B7005E6F6E /* QuickAccessPresentationController.m */,
 			);
 			path = StackOverflowDemoApp;
 			sourceTree = "<group>";
@@ -196,6 +201,7 @@
 				62A0C7711C54CF6500DF645E /* QuestionsViewController.m in Sources */,
 				62D41B861C5755FE005E6F6E /* AnswersViewController.m in Sources */,
 				62A0C7101C51729900DF645E /* main.m in Sources */,
+				62D41B951C59E3B7005E6F6E /* QuickAccessPresentationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

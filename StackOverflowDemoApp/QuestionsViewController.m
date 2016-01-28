@@ -11,6 +11,7 @@
 #import <StackOverflowSDK/Question.h>
 #import <StackOverflowSDK/User.h>
 #import "AnswersViewController.h"
+#import "QuickAccessPresentationController.h"
 
 @interface QuestionsViewController ()
 
@@ -95,19 +96,18 @@
 
 - (void)questionsReceivedWithResult:(NSArray *)result
 {
+    NSLog(@"questions received count:%lu", (unsigned long)result.count);
     self.quickAccessViewController.tableSource = result;
-    self.quickAccessViewController.modalPresentationStyle = UIModalPresentationPopover;
-    [self presentViewController:self.quickAccessViewController animated:YES completion:nil];
-    
-    // configure the Popover presentation controller
-//    UIPopoverPresentationController *popController = [self.quickAccessViewController popoverPresentationController];
-//    popController.permittedArrowDirections = UIPopoverArrowDirectionAny;
-//    popController.sourceView = self.tableView; //The view containing the anchor rectangle for the popover.
-//    popController.sourceRect = CGRectMake(384, 40, 0, 0); //The rectangle in the specified view in which to anchor the popover.
-    
-    //    popController.barButtonItem = self.leftButton;
-    //    popController.delegate = self;
-
+    [self.quickAccessViewController.tableView reloadData];
+    UINavigationController *quickAccessNavigation = [[UINavigationController alloc]initWithRootViewController:self.quickAccessViewController];
+    quickAccessNavigation.modalPresentationStyle = UIModalPresentationCustom;
+    quickAccessNavigation.transitioningDelegate = self;
+    self.quickAccessViewController.title = @"";
+    self.quickAccessViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithTitle:@"Close"
+                                                                                                      style:UIBarButtonItemStyleDone
+                                                                                                     target:self
+                                                                                                     action:@selector(closeQuickAccess)];
+    [self presentViewController:quickAccessNavigation animated:YES completion:nil];
 }
 
 - (void)questionsFailedWithError:(NSError *)error
@@ -115,6 +115,10 @@
     
 }
 
+- (void) closeQuickAccess
+{
+    [self.quickAccessViewController dismissViewControllerAnimated:YES completion:nil];
+}
 /*
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -158,5 +162,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+#pragma mark - UIViewControllerTransitioningDelegate
+- (nullable UIPresentationController *)presentationControllerForPresentedViewController:(UIViewController *)presented presentingViewController:(UIViewController *)presenting sourceViewController:(UIViewController *)source
+{
+    return [[QuickAccessPresentationController alloc] initWithPresentedViewController:presented presentingViewController:presenting];
+}
 
 @end

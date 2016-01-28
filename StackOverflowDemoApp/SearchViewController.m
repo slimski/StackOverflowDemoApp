@@ -62,7 +62,7 @@
         quickAccessVC.manager.questionsDelegate = mainVC;
         mainVC.quickAccessViewController = quickAccessVC;
         mainVC.tableSource = result;
-        
+        mainVC.title = self.searchQuery.text;
         [self.navigationController pushViewController:mainVC animated:YES];
    
     });
@@ -70,7 +70,7 @@
 
 - (void)searchFailedWithError:(NSError *)error
 {
-    
+    NSLog(@"search failed with error: %@", error);
 }
 
 @end

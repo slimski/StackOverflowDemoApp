@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <StackOverflowSDK/StackOverflowSDK.h>
 
-@interface QuestionsViewController : UITableViewController <QuestionsDelegate>
+@interface QuestionsViewController : UITableViewController <QuestionsDelegate, UIViewControllerTransitioningDelegate>
 
 @property (strong, nonatomic) NSArray *tableSource;
 @property (strong, nonatomic) QuestionsViewController *quickAccessViewController;
